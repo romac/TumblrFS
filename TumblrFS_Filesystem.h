@@ -17,6 +17,12 @@
 @interface TumblrFS_Filesystem : NSObject
 {
 	
+	NSString * blogName;
+	NSArray  * files;
+	
 }
+
+@property ( readwrite, retain ) NSArray  * files;
+@property ( readwrite, retain ) NSString * blogName;
 
 @end

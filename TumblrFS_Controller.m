@@ -12,21 +12,33 @@
 @implementation TumblrFS_Controller
 
 #pragma mark -
+#pragma mark Custom methods
 
-- ( void )mountVolumeAtPath: ( NSString * )mountPath withName: ( NSString * )volumeName
+- ( void )mountVolumeAtPath: ( NSString * )mountPath forBlog: ( NSString * )blogName
 {
 	fileSystemDelegate = [ [ TumblrFS_Filesystem alloc ] init ];
     fileSystem         = [ [ GMUserFileSystem alloc ] initWithDelegate: fileSystemDelegate isThreadSafe: NO ];
 	
     NSMutableArray * options        = [ NSMutableArray array ];
 	NSString	   * volumeIconPath = [ [ NSBundle mainBundle ] pathForResource: @"TumblrFS" ofType: @"icns" ];
+	NSString	   * volumeName     = [ NSString stringWithFormat: @"%@ tumblog", blogName ];
 	NSString	   * volumePath     = [ NSString stringWithFormat: @"%@/%@", mountPath, volumeName ];
 	
     [ options addObject: [ NSString stringWithFormat: @"volicon=%@", volumeIconPath ] ];
     [ options addObject: [ NSString stringWithFormat: @"volname=%@", volumeName ] ];
     [ options addObject: @"rdonly" ];
 	
+	[ fileSystemDelegate setBlogName: blogName ];
     [ fileSystem mountAtPath: volumePath withOptions: options ];
+}
+
+#pragma mark -
+#pragma mark IBActions
+
+- ( IBAction )mountButtonClicked: ( id )sender
+{
+	[ self mountVolumeAtPath: @"/Volumes" forBlog: [ blogNameField stringValue ] ];
+	[ spin startAnimation: self ];
 }
 
 #pragma mark -
@@ -51,6 +63,8 @@
     NSString     * parentPath = [ mountPath stringByDeletingLastPathComponent ];
 	
     [ [ NSWorkspace sharedWorkspace ] selectFile: mountPath inFileViewerRootedAtPath: parentPath ];
+	
+	[ window close ];
 }
 
 - ( void )didUnmount: ( NSNotification * )notification
@@ -76,8 +90,6 @@
     [ center addObserver: self selector: @selector( didUnmount: )
                                    name: kGMUserFileSystemDidUnmount
 				                 object: nil ];
-	
-    [ self mountVolumeAtPath: @"/Volumes" withName: @"TumblrFS" ];
 }
 
 - ( NSApplicationTerminateReply )applicationShouldTerminate: ( NSApplication * )sender

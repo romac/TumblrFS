@@ -11,8 +11,6 @@
 #import "TumblrFS_Filesystem.h"
 #import <MacFUSE/MacFUSE.h>
 
-// NOTE: It is fine to remove the below sections that are marked as 'Optional'.
-
 // The core set of file system operations. This class will serve as the delegate
 // for GMUserFileSystemFilesystem. For more details, see the section on 
 // GMUserFileSystemOperations found in the documentation at:
@@ -20,26 +18,34 @@
 
 @implementation TumblrFS_Filesystem
 
+@synthesize files, blogName;
+
 #pragma mark -
-#pragma mark Filesystem Lifecycle
+#pragma mark File system Lifecycle
 
 - ( void )willMount
 {
+	NSString * urlString = [ NSString stringWithFormat: @"http://projects.dev/TumblrFS/files.php?blog=%@", blogName ];
+	NSURL    * url       = [ NSURL URLWithString: urlString ];
 	
+	self.files           = [ NSArray arrayWithContentsOfURL: url ];
 }
-
-- ( void )willUnmount
-{
-	
-}
-
 
 #pragma mark -
 #pragma mark Directory Contents
 
 - ( NSArray * )contentsOfDirectoryAtPath: ( NSString * )path error: ( NSError ** )error
 {
-	return nil;
+	NSMutableArray * keys = [ [ NSMutableArray alloc ] init ];
+	
+	for( NSUInteger i = 0; i < [ files count ]; i++ )
+	{
+	    NSDictionary * file = [ files objectAtIndex: i ];
+	   
+	    [ keys addObject: [ file objectForKey: @"File Name" ] ];
+	}
+	
+    return keys;
 }
 
 #pragma mark -
@@ -49,7 +55,7 @@
                                   userData: ( id )userData
                                      error: ( NSError ** )error
 {
-	return nil;
+	return [ NSDictionary dictionary ];
 }
 
 - ( NSDictionary * )attributesOfFileSystemForPath: ( NSString * )path
@@ -64,6 +70,42 @@
 
 - ( NSData * )contentsAtPath: ( NSString * )path
 {
+	// return [ path dataUsingEncoding: NSASCIIStringEncoding ];
+	
+	NSCharacterSet  * toTrim   = [ NSCharacterSet characterSetWithCharactersInString: @"/" ];
+	NSString        * key      = [ path stringByTrimmingCharactersInSet: toTrim ];
+	NSDictionary    * fileDesc = NULL;
+	
+	for( NSUInteger i = 0; i < [ files count ]; i++ )
+	{
+	    NSDictionary * file = [ files objectAtIndex: i ];
+		
+	   if( [ [ file objectForKey: @"File Name" ] isEqualToString: key ] )
+	   {
+		   fileDesc = file;
+		  
+		  break;
+	   }
+    }
+	
+	if( !fileDesc )
+	{
+		return nil;
+	}
+	
+	NSString * type = [ fileDesc objectForKey: @"Type" ];
+	
+	if( [ type isEqualToString: @"Quote" ] )
+	{
+	    return [ [ fileDesc objectForKey: @"Text" ] dataUsingEncoding: NSUnicodeStringEncoding ];
+	}
+	
+	if( [ type isEqualToString: @"Photo" ] )
+	{
+	   // TODO: Uncomment next line and cache results.
+	   // return [ NSData dataWithContentsOfURL: [ NSURL URLWithString: [ fileDesc objectForKey: @"URL" ] ] ];
+	}
+	
 	return nil;
 }
 

@@ -13,10 +13,15 @@
 
 @interface TumblrFS_Controller : NSObject
 {
-	GMUserFileSystem    * fileSystem;
-	TumblrFS_Filesystem * fileSystemDelegate;
+	GMUserFileSystem             * fileSystem;
+	TumblrFS_Filesystem          * fileSystemDelegate;
+	IBOutlet NSTextField         * blogNameField;
+	IBOutlet NSWindow            * window;
+	IBOutlet NSProgressIndicator * spin;
 }
 
-- ( void )mountVolumeAtPath: ( NSString * )mountPath withName: ( NSString * )volumeName;
+- ( void )mountVolumeAtPath: ( NSString * )mountPath forBlog: ( NSString * )blogName;
+
+- ( IBAction )mountButtonClicked: ( id )sender;
 
 @end
