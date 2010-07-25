@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = C08B238711FB47D700DFCFCE /* TumblrFS */;
+		activeTarget = 8D1107260486CEB800E47090 /* TumblrFS */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* TumblrFS */,
+		);
+		codeSenseManager = C08B239B11FB47D900DFCFCE /* Code sense */;
+		executables = (
+			C08B238711FB47D700DFCFCE /* TumblrFS */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					993,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 301761923;
+			PBXWorkspaceStateSaveDate = 301761923;
+		};
+		perUserProjectItems = {
+			C042D08A11FC8585009319EC /* PBXTextBookmark */ = C042D08A11FC8585009319EC /* PBXTextBookmark */;
+			C08B242911FC6F0900DFCFCE = C08B242911FC6F0900DFCFCE /* PBXTextBookmark */;
+			C08B242A11FC6F0900DFCFCE = C08B242A11FC6F0900DFCFCE /* PBXBookmark */;
+			C08B245911FC73A800DFCFCE = C08B245911FC73A800DFCFCE /* PBXTextBookmark */;
+			C08B245A11FC73A800DFCFCE = C08B245A11FC73A800DFCFCE /* PBXTextBookmark */;
+			C08B245E11FC749C00DFCFCE = C08B245E11FC749C00DFCFCE /* PBXTextBookmark */;
+			C08B246011FC749C00DFCFCE = C08B246011FC749C00DFCFCE /* PBXTextBookmark */;
+			C08B246F11FC774400DFCFCE = C08B246F11FC774400DFCFCE /* PBXTextBookmark */;
+			C08B247011FC774400DFCFCE = C08B247011FC774400DFCFCE /* PBXTextBookmark */;
+			C08B247311FC774400DFCFCE = C08B247311FC774400DFCFCE /* PBXTextBookmark */;
+			C08B24A511FC77E200DFCFCE = C08B24A511FC77E200DFCFCE /* PBXTextBookmark */;
+			C08B24A611FC77E200DFCFCE = C08B24A611FC77E200DFCFCE /* PBXTextBookmark */;
+			C08B24A711FC77E200DFCFCE = C08B24A711FC77E200DFCFCE /* PBXTextBookmark */;
+			C08B24BA11FC79F300DFCFCE = C08B24BA11FC79F300DFCFCE /* PBXTextBookmark */;
+			C0ADEFD011FC7F28001F1307 = C0ADEFD011FC7F28001F1307 /* PBXTextBookmark */;
+			C0ADEFD411FC7F4F001F1307 = C0ADEFD411FC7F4F001F1307 /* PBXTextBookmark */;
+			C0ADEFDE11FC7FAA001F1307 = C0ADEFDE11FC7FAA001F1307 /* PBXTextBookmark */;
+			C0ADEFE211FC817E001F1307 = C0ADEFE211FC817E001F1307 /* PBXTextBookmark */;
+			C0ADEFE311FC817E001F1307 = C0ADEFE311FC817E001F1307 /* PBXTextBookmark */;
+			C0ADEFE511FC8186001F1307 = C0ADEFE511FC8186001F1307 /* PBXTextBookmark */;
+			C0ADEFE611FC8186001F1307 = C0ADEFE611FC8186001F1307 /* PBXTextBookmark */;
+			C0ADEFE711FC8186001F1307 = C0ADEFE711FC8186001F1307 /* PBXTextBookmark */;
+			C0ADEFE811FC8186001F1307 = C0ADEFE811FC8186001F1307 /* PBXTextBookmark */;
+			C0ADEFE911FC8186001F1307 = C0ADEFE911FC8186001F1307 /* PBXTextBookmark */;
+			C0ADEFEE11FC81B2001F1307 = C0ADEFEE11FC81B2001F1307 /* PBXTextBookmark */;
+			C0ADEFEF11FC81B2001F1307 = C0ADEFEF11FC81B2001F1307 /* PBXTextBookmark */;
+			C0ADEFF211FC81BB001F1307 = C0ADEFF211FC81BB001F1307 /* PBXTextBookmark */;
+			C0ADEFF311FC81BB001F1307 = C0ADEFF311FC81BB001F1307 /* PBXTextBookmark */;
+			C0ADEFF411FC81BB001F1307 = C0ADEFF411FC81BB001F1307 /* PBXTextBookmark */;
+			C0ADEFF511FC81BB001F1307 = C0ADEFF511FC81BB001F1307 /* PBXTextBookmark */;
+		};
+		sourceControlManager = C08B239A11FB47D900DFCFCE /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 368}}";
+			sepNavSelRange = "{190, 0}";
+			sepNavVisRange = "{0, 244}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* TumblrFS_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 391}}";
+			sepNavSelRange = "{111, 0}";
+			sepNavVisRange = "{0, 147}";
+		};
+	};
+	8D1107260486CEB800E47090 /* TumblrFS */ = {
+		activeExec = 0;
+		executables = (
+			C08B238711FB47D700DFCFCE /* TumblrFS */,
+		);
+	};
+	C042D08A11FC8585009319EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925BE0EE507A800A7B2B2 /* TumblrFS_Controller.h */;
+		name = "TumblrFS_Controller.h: 10";
+		rLen = 0;
+		rLoc = 156;
+		rType = 0;
+		vrLen = 464;
+		vrLoc = 0;
+	};
+	C08B238711FB47D700DFCFCE /* TumblrFS */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = TumblrFS;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	C08B239A11FB47D900DFCFCE /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	C08B239B11FB47D900DFCFCE /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C08B242911FC6F0900DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 13";
+		rLen = 0;
+		rLoc = 190;
+		rType = 0;
+		vrLen = 244;
+		vrLoc = 0;
+	};
+	C08B242A11FC6F0900DFCFCE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FFA311CE0EE5160400FF2904 /* TumblrFS.icns */;
+	};
+	C08B245911FC73A800DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925BF0EE507A800A7B2B2 /* TumblrFS_Controller.m */;
+		name = "TumblrFS_Controller.m: 27";
+		rLen = 0;
+		rLoc = 362;
+		rType = 0;
+		vrLen = 1017;
+		vrLoc = 85;
+	};
+	C08B245A11FC73A800DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925BE0EE507A800A7B2B2 /* TumblrFS_Controller.h */;
+		name = "TumblrFS_Controller.h: 22";
+		rLen = 0;
+		rLoc = 429;
+		rType = 0;
+		vrLen = 417;
+		vrLoc = 0;
+	};
+	C08B245E11FC749C00DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C08B245F11FC749C00DFCFCE /* GMUserFileSystem.h */;
+		name = "GMUserFileSystem.h: 199";
+		rLen = 36;
+		rLoc = 8617;
+		rType = 0;
+		vrLen = 742;
+		vrLoc = 8111;
+	};
+	C08B245F11FC749C00DFCFCE /* GMUserFileSystem.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = GMUserFileSystem.h;
+		path = /Library/Frameworks/MacFUSE.framework/Versions/A/Headers/GMUserFileSystem.h;
+		sourceTree = "<absolute>";
+	};
+	C08B246011FC749C00DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* TumblrFS_Prefix.pch */;
+		name = "TumblrFS_Prefix.pch: 5";
+		rLen = 0;
+		rLoc = 111;
+		rType = 0;
+		vrLen = 147;
+		vrLoc = 0;
+	};
+	C08B246911FC750800DFCFCE /* NSError+POSIX.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 464}}";
+			sepNavSelRange = "{952, 0}";
+			sepNavVisRange = "{94, 865}";
+		};
+	};
+	C08B246A11FC750800DFCFCE /* NSError+POSIX.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 604}}";
+			sepNavSelRange = "{958, 0}";
+			sepNavVisRange = "{0, 965}";
+		};
+	};
+	C08B246B11FC750800DFCFCE /* NSImage+IconData.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 604}}";
+			sepNavSelRange = "{1078, 0}";
+			sepNavVisRange = "{0, 1085}";
+		};
+	};
+	C08B246C11FC750800DFCFCE /* NSImage+IconData.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 2384}}";
+			sepNavSelRange = "{4544, 0}";
+			sepNavVisRange = "{972, 878}";
+		};
+	};
+	C08B246F11FC774400DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C08B246911FC750800DFCFCE /* NSError+POSIX.h */;
+		name = "NSError+POSIX.h: 26";
+		rLen = 0;
+		rLoc = 952;
+		rType = 0;
+		vrLen = 865;
+		vrLoc = 94;
+	};
+	C08B247011FC774400DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C08B246A11FC750800DFCFCE /* NSError+POSIX.m */;
+		name = "NSError+POSIX.m: 29";
+		rLen = 0;
+		rLoc = 958;
+		rType = 0;
+		vrLen = 965;
+		vrLoc = 0;
+	};
+	C08B247311FC774400DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C10EE5082D00A7B2B2 /* TumblrFS_Filesystem.h */;
+		name = "TumblrFS_Filesystem.h: 19";
+		rLen = 0;
+		rLoc = 539;
+		rType = 0;
+		vrLen = 548;
+		vrLoc = 0;
+	};
+	C08B24A511FC77E200DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C08B246B11FC750800DFCFCE /* NSImage+IconData.h */;
+		name = "NSImage+IconData.h: 30";
+		rLen = 0;
+		rLoc = 1078;
+		rType = 0;
+		vrLen = 1085;
+		vrLoc = 0;
+	};
+	C08B24A611FC77E200DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C08B246C11FC750800DFCFCE /* NSImage+IconData.m */;
+		name = "NSImage+IconData.m: 133";
+		rLen = 0;
+		rLoc = 4544;
+		rType = 0;
+		vrLen = 878;
+		vrLoc = 972;
+	};
+	C08B24A711FC77E200DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C20EE5082D00A7B2B2 /* TumblrFS_Filesystem.m */;
+		name = "TumblrFS_Filesystem.m: 33";
+		rLen = 0;
+		rLoc = 834;
+		rType = 0;
+		vrLen = 1424;
+		vrLoc = 262;
+	};
+	C08B24BA11FC79F300DFCFCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C20EE5082D00A7B2B2 /* TumblrFS_Filesystem.m */;
+		name = "TumblrFS_Filesystem.m: 69";
+		rLen = 0;
+		rLoc = 1744;
+		rType = 0;
+		vrLen = 404;
+		vrLoc = 3192;
+	};
+	C0ADEFD011FC7F28001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C20EE5082D00A7B2B2 /* TumblrFS_Filesystem.m */;
+		name = "TumblrFS_Filesystem.m: 139";
+		rLen = 0;
+		rLoc = 3547;
+		rType = 0;
+		vrLen = 456;
+		vrLoc = 3140;
+	};
+	C0ADEFD411FC7F4F001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C20EE5082D00A7B2B2 /* TumblrFS_Filesystem.m */;
+		name = "TumblrFS_Filesystem.m: 25";
+		rLen = 0;
+		rLoc = 708;
+		rType = 0;
+		vrLen = 1336;
+		vrLoc = 154;
+	};
+	C0ADEFDE11FC7FAA001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C20EE5082D00A7B2B2 /* TumblrFS_Filesystem.m */;
+		name = "TumblrFS_Filesystem.m: 113";
+		rLen = 1;
+		rLoc = 2989;
+		rType = 0;
+		vrLen = 1048;
+		vrLoc = 1286;
+	};
+	C0ADEFE211FC817E001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected specifier-qualifier-list before 'TumblrFS_Filesystem'";
+		fRef = FFD925BE0EE507A800A7B2B2 /* TumblrFS_Controller.h */;
+		rLen = 1;
+		rLoc = 16;
+		rType = 1;
+	};
+	C0ADEFE311FC817E001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925BE0EE507A800A7B2B2 /* TumblrFS_Controller.h */;
+		name = "TumblrFS_Controller.h: 17";
+		rLen = 0;
+		rLoc = 291;
+		rType = 0;
+		vrLen = 270;
+		vrLoc = 157;
+	};
+	C0ADEFE511FC8186001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C20EE5082D00A7B2B2 /* TumblrFS_Filesystem.m */;
+		name = "TumblrFS_Filesystem.m: 113";
+		rLen = 1;
+		rLoc = 2989;
+		rType = 0;
+		vrLen = 1048;
+		vrLoc = 1286;
+	};
+	C0ADEFE611FC8186001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925BE0EE507A800A7B2B2 /* TumblrFS_Controller.h */;
+		name = "TumblrFS_Controller.h: 17";
+		rLen = 0;
+		rLoc = 333;
+		rType = 0;
+		vrLen = 432;
+		vrLoc = 0;
+	};
+	C0ADEFE711FC8186001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925BF0EE507A800A7B2B2 /* TumblrFS_Controller.m */;
+		name = "TumblrFS_Controller.m: 12";
+		rLen = 0;
+		rLoc = 268;
+		rType = 0;
+		vrLen = 1418;
+		vrLoc = 0;
+	};
+	C0ADEFE811FC8186001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C10EE5082D00A7B2B2 /* TumblrFS_Filesystem.h */;
+		name = "TumblrFS_Filesystem.h: 17";
+		rLen = 0;
+		rLoc = 535;
+		rType = 0;
+		vrLen = 548;
+		vrLoc = 0;
+	};
+	C0ADEFE911FC8186001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C10EE5082D00A7B2B2 /* TumblrFS_Filesystem.h */;
+		name = "TumblrFS_Filesystem.h: 17";
+		rLen = 0;
+		rLoc = 535;
+		rType = 0;
+		vrLen = 548;
+		vrLoc = 0;
+	};
+	C0ADEFEE11FC81B2001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected specifier-qualifier-list before 'TumblrFS_Filesystem'";
+		fRef = FFD925BE0EE507A800A7B2B2 /* TumblrFS_Controller.h */;
+		rLen = 1;
+		rLoc = 16;
+		rType = 1;
+	};
+	C0ADEFEF11FC81B2001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925BE0EE507A800A7B2B2 /* TumblrFS_Controller.h */;
+		name = "TumblrFS_Controller.h: 17";
+		rLen = 0;
+		rLoc = 291;
+		rType = 0;
+		vrLen = 398;
+		vrLoc = 29;
+	};
+	C0ADEFF211FC81BB001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C10EE5082D00A7B2B2 /* TumblrFS_Filesystem.h */;
+		name = "TumblrFS_Filesystem.h: 17";
+		rLen = 0;
+		rLoc = 535;
+		rType = 0;
+		vrLen = 548;
+		vrLoc = 0;
+	};
+	C0ADEFF311FC81BB001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925C20EE5082D00A7B2B2 /* TumblrFS_Filesystem.m */;
+		name = "TumblrFS_Filesystem.m: 62";
+		rLen = 0;
+		rLoc = 1744;
+		rType = 0;
+		vrLen = 1032;
+		vrLoc = 1313;
+	};
+	C0ADEFF411FC81BB001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected specifier-qualifier-list before 'TumblrFS_Filesystem'";
+		fRef = FFD925BE0EE507A800A7B2B2 /* TumblrFS_Controller.h */;
+		rLen = 1;
+		rLoc = 16;
+		rType = 1;
+	};
+	C0ADEFF511FC81BB001F1307 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FFD925BE0EE507A800A7B2B2 /* TumblrFS_Controller.h */;
+		name = "TumblrFS_Controller.h: 10";
+		rLen = 0;
+		rLoc = 156;
+		rType = 0;
+		vrLen = 464;
+		vrLoc = 0;
+	};
+	FFD925BE0EE507A800A7B2B2 /* TumblrFS_Controller.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 596}}";
+			sepNavSelRange = "{210, 0}";
+			sepNavVisRange = "{0, 432}";
+			sepNavWindowFrame = "{{15, 4}, {1425, 869}}";
+		};
+	};
+	FFD925BF0EE507A800A7B2B2 /* TumblrFS_Controller.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 1488}}";
+			sepNavSelRange = "{2828, 0}";
+			sepNavVisRange = "{2019, 1100}";
+			sepNavWindowFrame = "{{15, 4}, {1425, 869}}";
+		};
+	};
+	FFD925C10EE5082D00A7B2B2 /* TumblrFS_Filesystem.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 596}}";
+			sepNavSelRange = "{535, 0}";
+			sepNavVisRange = "{0, 548}";
+			sepNavWindowFrame = "{{15, 4}, {1425, 869}}";
+		};
+	};
+	FFD925C20EE5082D00A7B2B2 /* TumblrFS_Filesystem.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 2208}}";
+			sepNavSelRange = "{1744, 0}";
+			sepNavVisRange = "{1313, 1032}";
+			sepNavWindowFrame = "{{15, 4}, {1425, 869}}";
+		};
+	};
+}
