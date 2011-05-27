@@ -64,7 +64,7 @@
 	
     [ [ NSWorkspace sharedWorkspace ] selectFile: mountPath inFileViewerRootedAtPath: parentPath ];
 	
-	[ window close ];
+	// [ window close ];
 }
 
 - ( void )didUnmount: ( NSNotification * )notification
