@@ -1,13 +1,15 @@
 
-TumblrFS
-========
+# TumblrFS
 
-Description
------------
+## Description
 
 TumblrFS is a MacFUSE file system which allows you to browse a tumblog as if it was a volume on your computer.
 
-License
--------
+## Warning
+
+The project is a WIP and currently depends on some stupid PHP script to parse the XML data
+returned by the Tumblr API. So it will likely not work on your computer. Sorry.
+
+## License
 
 TumblrFS is licensed under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
