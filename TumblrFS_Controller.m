@@ -16,19 +16,19 @@
 
 - ( void )mountVolumeAtPath: ( NSString * )mountPath forBlog: ( NSString * )blogName
 {
-	fileSystemDelegate = [ [ TumblrFS_Filesystem alloc ] init ];
+    fileSystemDelegate = [ [ TumblrFS_Filesystem alloc ] init ];
     fileSystem         = [ [ GMUserFileSystem alloc ] initWithDelegate: fileSystemDelegate isThreadSafe: NO ];
-	
+    
     NSMutableArray * options        = [ NSMutableArray array ];
-	NSString	   * volumeIconPath = [ [ NSBundle mainBundle ] pathForResource: @"TumblrFS" ofType: @"icns" ];
-	NSString	   * volumeName     = [ NSString stringWithFormat: @"%@ tumblog", blogName ];
-	NSString	   * volumePath     = [ NSString stringWithFormat: @"%@/%@", mountPath, volumeName ];
-	
+    NSString       * volumeIconPath = [ [ NSBundle mainBundle ] pathForResource: @"TumblrFS" ofType: @"icns" ];
+    NSString       * volumeName     = [ NSString stringWithFormat: @"%@ tumblog", blogName ];
+    NSString       * volumePath     = [ NSString stringWithFormat: @"%@/%@", mountPath, volumeName ];
+    
     [ options addObject: [ NSString stringWithFormat: @"volicon=%@", volumeIconPath ] ];
     [ options addObject: [ NSString stringWithFormat: @"volname=%@", volumeName ] ];
     [ options addObject: @"rdonly" ];
-	
-	[ fileSystemDelegate setBlogName: blogName ];
+    
+    [ fileSystemDelegate setBlogName: blogName ];
     [ fileSystem mountAtPath: volumePath withOptions: options ];
 }
 
@@ -37,8 +37,8 @@
 
 - ( IBAction )mountButtonClicked: ( id )sender
 {
-	[ self mountVolumeAtPath: @"/Volumes" forBlog: [ blogNameField stringValue ] ];
-	[ spin startAnimation: self ];
+    [ self mountVolumeAtPath: @"/Volumes" forBlog: [ blogNameField stringValue ] ];
+    [ spin startAnimation: self ];
 }
 
 #pragma mark -
@@ -48,11 +48,11 @@
 {
     NSDictionary * userInfo = [ notification userInfo ];
     NSError      * error    = [ userInfo objectForKey: kGMUserFileSystemErrorKey ];
-	
+    
     NSLog( @"kGMUserFileSystem Error: %@, userInfo=%@", error, [ error userInfo ] );
-	
+    
     NSRunAlertPanel( @"Mount Failed", [ error localizedDescription ], nil, nil, nil );
-	
+    
     [ [ NSApplication sharedApplication ] terminate: nil ];
 }
 
@@ -61,10 +61,10 @@
     NSDictionary * userInfo   = [ notification userInfo ];
     NSString     * mountPath  = [ userInfo objectForKey: kGMUserFileSystemMountPathKey ];
     NSString     * parentPath = [ mountPath stringByDeletingLastPathComponent ];
-	
+    
     [ [ NSWorkspace sharedWorkspace ] selectFile: mountPath inFileViewerRootedAtPath: parentPath ];
-	
-	// [ window close ];
+    
+    // [ window close ];
 }
 
 - ( void )didUnmount: ( NSNotification * )notification
@@ -78,28 +78,28 @@
 - ( void )applicationDidFinishLaunching: ( NSNotification * )notification
 {
     NSNotificationCenter * center = [ NSNotificationCenter defaultCenter ];
-	
+    
     [ center addObserver: self selector: @selector( mountFailed: )
-								   name: kGMUserFileSystemMountFailed
-								 object: nil ];
-	
+                                   name: kGMUserFileSystemMountFailed
+                                 object: nil ];
+    
     [ center addObserver: self selector: @selector( didMount: )
                                    name: kGMUserFileSystemDidMount
-						  		 object: nil ];
-	
+                                 object: nil ];
+    
     [ center addObserver: self selector: @selector( didUnmount: )
                                    name: kGMUserFileSystemDidUnmount
-				                 object: nil ];
+                                 object: nil ];
 }
 
 - ( NSApplicationTerminateReply )applicationShouldTerminate: ( NSApplication * )sender
 {
     [ [ NSNotificationCenter defaultCenter ] removeObserver: self ];
-	
+    
     [ fileSystem unmount ];
     [ fileSystem release ];
     [ fileSystemDelegate release ];
-	
+    
     return NSTerminateNow;
 }
 

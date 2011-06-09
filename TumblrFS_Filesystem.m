@@ -25,10 +25,10 @@
 
 - ( void )willMount
 {
-	NSString * urlString = [ NSString stringWithFormat: @"http://projects.dev/TumblrFS/files.php?blog=%@", blogName ];
-	NSURL    * url       = [ NSURL URLWithString: urlString ];
-	
-	self.files           = [ NSArray arrayWithContentsOfURL: url ];
+    NSString * urlString = [ NSString stringWithFormat: @"http://projects.dev/TumblrFS/files.php?blog=%@", blogName ];
+    NSURL    * url       = [ NSURL URLWithString: urlString ];
+    
+    self.files           = [ NSArray arrayWithContentsOfURL: url ];
 }
 
 #pragma mark -
@@ -36,15 +36,13 @@
 
 - ( NSArray * )contentsOfDirectoryAtPath: ( NSString * )path error: ( NSError ** )error
 {
-	NSMutableArray * keys = [ [ NSMutableArray alloc ] init ];
-	
-	for( NSUInteger i = 0; i < [ files count ]; i++ )
-	{
-	    NSDictionary * file = [ files objectAtIndex: i ];
-	   
-	    [ keys addObject: [ file objectForKey: @"File Name" ] ];
-	}
-	
+    NSMutableArray * keys = [ [ NSMutableArray alloc ] init ];
+    
+    for( NSUInteger i = 0; i < [ files count ]; i++ )
+    {
+        [ keys addObject: [ [ files objectAtIndex: i ] objectForKey: @"File Name" ] ];
+    }
+    
     return keys;
 }
 
@@ -55,13 +53,13 @@
                                   userData: ( id )userData
                                      error: ( NSError ** )error
 {
-	return [ NSDictionary dictionary ];
+    return [ NSDictionary dictionary ];
 }
 
 - ( NSDictionary * )attributesOfFileSystemForPath: ( NSString * )path
                                             error: ( NSError ** )error
 {
-	// Default file system attributes.
+    // Default file system attributes.
     return [ NSDictionary dictionary ];
 }
 
@@ -70,43 +68,43 @@
 
 - ( NSData * )contentsAtPath: ( NSString * )path
 {
-	// return [ path dataUsingEncoding: NSASCIIStringEncoding ];
-	
-	NSCharacterSet  * toTrim   = [ NSCharacterSet characterSetWithCharactersInString: @"/" ];
-	NSString        * key      = [ path stringByTrimmingCharactersInSet: toTrim ];
-	NSDictionary    * fileDesc = NULL;
-	
-	for( NSUInteger i = 0; i < [ files count ]; i++ )
-	{
-	    NSDictionary * file = [ files objectAtIndex: i ];
-		
-	   if( [ [ file objectForKey: @"File Name" ] isEqualToString: key ] )
-	   {
-		   fileDesc = file;
-		  
-		  break;
-	   }
+    // return [ path dataUsingEncoding: NSASCIIStringEncoding ];
+    
+    NSCharacterSet  * toTrim   = [ NSCharacterSet characterSetWithCharactersInString: @"/" ];
+    NSString        * key      = [ path stringByTrimmingCharactersInSet: toTrim ];
+    NSDictionary    * fileDesc = NULL;
+    
+    for( NSUInteger i = 0; i < [ files count ]; i++ )
+    {
+        NSDictionary * file = [ files objectAtIndex: i ];
+        
+       if( [ [ file objectForKey: @"File Name" ] isEqualToString: key ] )
+       {
+           fileDesc = file;
+          
+          break;
+       }
     }
-	
-	if( !fileDesc )
-	{
-		return nil;
-	}
-	
-	NSString * type = [ fileDesc objectForKey: @"Type" ];
-	
-	if( [ type isEqualToString: @"Quote" ] )
-	{
-	    return [ [ fileDesc objectForKey: @"Text" ] dataUsingEncoding: NSUnicodeStringEncoding ];
-	}
-	
-	if( [ type isEqualToString: @"Photo" ] )
-	{
-	   // TODO: Uncomment next line and cache results.
-	   // return [ NSData dataWithContentsOfURL: [ NSURL URLWithString: [ fileDesc objectForKey: @"URL" ] ] ];
-	}
-	
-	return nil;
+    
+    if( !fileDesc )
+    {
+        return nil;
+    }
+    
+    NSString * type = [ fileDesc objectForKey: @"Type" ];
+    
+    if( [ type isEqualToString: @"Quote" ] )
+    {
+        return [ [ fileDesc objectForKey: @"Text" ] dataUsingEncoding: NSUnicodeStringEncoding ];
+    }
+    
+    if( [ type isEqualToString: @"Photo" ] )
+    {
+       // TODO: Uncomment next line and cache results.
+       // return [ NSData dataWithContentsOfURL: [ NSURL URLWithString: [ fileDesc objectForKey: @"URL" ] ] ];
+    }
+    
+    return nil;
 }
 
 
